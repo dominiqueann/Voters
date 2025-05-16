@@ -18,3 +18,6 @@ class TestVoterEligibility(unittest.TestCase):
 
     def test_exactly_18_and_non_citizen(self):
         self.assertFalse(is_eligible_to_vote(18, False))
+
+    def test_negative_age(self):
+        self.assertFalse(is_eligible_to_vote(-1, False))
