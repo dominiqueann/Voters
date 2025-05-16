@@ -9,3 +9,7 @@ class TestVoterEligibility(unittest.TestCase):
 
     def test_underage_voter(self):
         self.assertTrue(is_not_eligible_to_vote(15))
+
+    def test_non_citizen_voter(self):
+        self.assertFalse(is_eligible_to_vote(14, False))
+        
