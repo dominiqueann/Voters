@@ -14,4 +14,4 @@ class TestVoterEligibility(unittest.TestCase):
         self.assertFalse(is_eligible_to_vote(14, False))
 
     def test_underage_non_citizen(self):
-        self.assertTrue(is_eligible_to_vote(10, False))
+        self.assertFalse(is_eligible_to_vote(10, False))
