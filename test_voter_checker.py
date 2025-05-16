@@ -12,4 +12,4 @@ class TestVoterEligibility(unittest.TestCase):
 
     def test_non_citizen_voter(self):
         self.assertFalse(is_eligible_to_vote(14, False))
-        
+  
